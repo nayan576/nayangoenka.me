@@ -1,155 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Writing by Nayan Goenka on product strategy, technical architecture, entrepreneurship, and personal philosophy.">
-    <link rel="canonical" href="https://nayangoenka.me/blog/">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Nayan Goenka">
-
-    <meta property="og:title" content="Writing | Nayan Goenka">
-    <meta property="og:description" content="Essays on product, architecture, entrepreneurship, and philosophy.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nayangoenka.me/blog/">
-
-    <title>Writing | Nayan Goenka</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #f8f6f2; color: #2c2c2c; line-height: 1.6;
-        }
-        header {
-            background: white; border-bottom: 1px solid #e8e4db;
-            padding: 20px 40px; position: sticky; top: 0; z-index: 100;
-        }
-        header nav {
-            display: flex; justify-content: space-between; align-items: center;
-            max-width: 1200px; margin: 0 auto;
-        }
-        header .logo {
-            font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
-            color: #1a3a52; text-decoration: none; letter-spacing: -0.5px;
-        }
-        header nav ul { display: flex; list-style: none; gap: 40px; }
-        header nav a {
-            font-size: 13px; font-weight: 500; text-decoration: none; color: #5a5a5a;
-            text-transform: uppercase; letter-spacing: 0.8px; transition: color 0.2s;
-        }
-        header nav a:hover { color: #1a3a52; }
-
-        .page-header {
-            background: linear-gradient(to bottom, #1a3a52, #264a68);
-            color: white; padding: 80px 40px; text-align: center;
-        }
-        .page-header h1 {
-            font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 700;
-            letter-spacing: -1px; margin-bottom: 12px;
-        }
-        .page-header p { font-size: 16px; color: #d4e0eb; max-width: 600px; margin: 0 auto; }
-
-        main { max-width: 800px; margin: 0 auto; padding: 80px 40px; }
-
-        .post-list { display: flex; flex-direction: column; gap: 8px; }
-        .post-item {
-            display: block; padding: 32px; background: white;
-            border: 1px solid #e8e4db; border-left: 3px solid #1a3a52;
-            text-decoration: none; color: inherit; transition: all 0.2s;
-        }
-        .post-item:hover { box-shadow: 0 4px 16px rgba(26, 58, 82, 0.08); transform: translateX(2px); }
-        .post-item .date {
-            font-size: 12px; color: #8a8a8a; text-transform: uppercase;
-            letter-spacing: 0.5px; margin-bottom: 8px;
-        }
-        .post-item h2 {
-            font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700;
-            color: #1a3a52; margin-bottom: 10px; letter-spacing: -0.3px;
-        }
-        .post-item p { font-size: 15px; color: #5a5a5a; line-height: 1.7; }
-
-        footer {
-            background: #0f1e28; color: #8a8a8a; padding: 32px 40px; text-align: center;
-            font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 768px) {
-            header { padding: 16px 24px; }
-            header nav ul { display: none; }
-            .page-header { padding: 60px 24px; }
-            .page-header h1 { font-size: 38px; }
-            main { padding: 48px 24px; }
-            .post-item { padding: 24px; }
-            .post-item h2 { font-size: 22px; }
-        }
-        @media (max-width: 480px) {
-            .page-header { padding: 48px 16px; }
-            .page-header h1 { font-size: 30px; }
-            main { padding: 32px 16px; }
-            .post-item { padding: 20px; }
-            .post-item h2 { font-size: 20px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Writing by Nayan Goenka on product, leadership, entrepreneurship, and personal philosophy.">
+<link rel="canonical" href="https://nayangoenka.me/blog/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Nayan Goenka">
+<meta property="og:title" content="Writing | Nayan Goenka">
+<meta property="og:description" content="Essays on product, leadership, entrepreneurship, and philosophy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nayangoenka.me/blog/">
+<title>Writing | Nayan Goenka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">Nayan Goenka</a>
-            <ul>
-                <li><a href="/#work">Work</a></li>
-                <li><a href="/#expertise">Expertise</a></li>
-                <li><a href="/#principles">Approach</a></li>
-                <li><a href="/blog/">Writing</a></li>
-                <li><a href="/#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="page-header">
-        <h1>Writing</h1>
-        <p>Essays on product strategy, technical architecture, entrepreneurship, and the occasional piece of personal philosophy.</p>
-    </section>
-
-    <main>
-        <div class="post-list">
-            <a href="/blog/today-im-a-believer/" class="post-item">
-                <div class="date">Engineer's Day</div>
-                <h2>Today I'm a Believer</h2>
-                <p>A highly personal piece on logic, reason, and what it takes for a zero-BS rationalist to arrive at belief.</p>
-            </a>
-
-            <a href="/blog/officially-yes-personally-no/" class="post-item">
-                <div class="date">On Leadership</div>
-                <h2>Officially Yes, Personally No</h2>
-                <p>On making the call when no one stands with you — and owning the outcome, whichever way it lands.</p>
-            </a>
-
-            <a href="/blog/my-leap-of-faith/" class="post-item">
-                <div class="date">Essay</div>
-                <h2>My Leap of Faith</h2>
-                <p>A cautious, risk-averse founder learns what trust actually costs — and what it returns.</p>
-            </a>
-
-            <a href="/blog/entrepreneurial-nirvana/" class="post-item">
-                <div class="date">Essay</div>
-                <h2>Entrepreneurial Nirvana</h2>
-                <p>Being an entrepreneur is an ascetic intervention, not a materialistic one. It's about a way of life, not a quantity of life.</p>
-            </a>
-
-            <a href="/blog/life-is-all-about-keep-walking/" class="post-item">
-                <div class="date">Essay</div>
-                <h2>Life is All About "Keep Walking"</h2>
-                <p>On unexpected gifts, mysterious loops, and why staying in motion is the only thing that ever made sense.</p>
-            </a>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand">nayan goenka</a>
+    <nav><ul class="nav">
+      <li><a href="/#work">Work</a></li>
+      <li><a href="/#expertise">Expertise</a></li>
+      <li><a href="/#approach">Approach</a></li>
+      <li><a href="/blog/">Writing</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main>
+  <div class="page-head"><div class="wrap">
+    <p class="eyebrow">Writing</p>
+    <h1>Notes &amp; essays</h1>
+    <p>On product strategy, technical architecture, entrepreneurship, and the occasional piece of personal philosophy.</p>
+  </div></div>
+  <section class="section" style="border-top:none;padding-top:48px"><div class="wrap"><div class="posts">
+      <a href="/blog/today-im-a-believer/" class="post-row">
+        <span class="kicker">Personal</span>
+        <div>
+          <h3>Today I'm a Believer</h3>
+          <p>A zero-BS rationalist confronts something he can't explain — and reconsiders what faith means.</p>
         </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Nayan Goenka. All Rights Reserved.</p>
-    </footer>
+      </a>
+      <a href="/blog/officially-yes-personally-no/" class="post-row">
+        <span class="kicker">Leadership</span>
+        <div>
+          <h3>Officially Yes, Personally No</h3>
+          <p>On making the call when no one stands with you — and owning the outcome, whichever way it lands.</p>
+        </div>
+      </a>
+      <a href="/blog/my-leap-of-faith/" class="post-row">
+        <span class="kicker">Essay</span>
+        <div>
+          <h3>My Leap of Faith</h3>
+          <p>A cautious, risk-averse founder learns what trust actually costs — and what it returns.</p>
+        </div>
+      </a>
+      <a href="/blog/entrepreneurial-nirvana/" class="post-row">
+        <span class="kicker">Essay</span>
+        <div>
+          <h3>Entrepreneurial Nirvana</h3>
+          <p>Entrepreneurship as an ascetic intervention, not a materialistic one. A way of life, not a quantity of it.</p>
+        </div>
+      </a>
+      <a href="/blog/life-is-all-about-keep-walking/" class="post-row">
+        <span class="kicker">Essay</span>
+        <div>
+          <h3>Life is All About &ldquo;Keep Walking&rdquo;</h3>
+          <p>On unexpected gifts, mysterious loops, and why staying in motion is the only thing that ever made sense.</p>
+        </div>
+      </a>
+  </div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Nayan Goenka</p>
+    <div class="links">
+      <a href="https://linkedin.com/in/nayan576" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/nayan576" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:ping@nayangoenka.me">Email</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
